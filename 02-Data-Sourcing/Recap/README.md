@@ -1,15 +1,18 @@
-Run the following command in your Terminal to go inside of the recap folder:
-
-```bash
-cd 01-Python/03-SQL-Basics/Recap
-````
-
-Once positioned in the proper folder (see steps above), launch the following command in your Terminal:
+Once you are in the proper folder, please run:
 
 ```bash
 jupyter notebook Recap.ipynb
 ```
 
-It will automatically open your web browser, this is where you are going to code!
+---
 
-Wait for your classmates to be ready and your teacher to give you instructions, don't start coding yet!
+In this reboot, we are going to use:
+
+- The [Goodreads books](https://www.kaggle.com/jealousleopard/goodreadsbooks) dataset from Kaggle (a CSV to download)
+- The [Open Library Books API](https://openlibrary.org/dev/docs/api/books)
+
+The goal of this reboot is to load the data from the CSV + loop over rows to enrich each row with information such as:
+
+- List of subjects (Science, Humor, Travel, etc.)
+- The cover URL of the book
+- Other information you'd find useful in the JSON API
