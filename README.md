@@ -1,5 +1,12 @@
-During this first week, we will tackle the following challenges:
+## Data analysis
 
-- Writing code with Python: variables, conditions, loops, list, dict, etc.
-- Data collection: gather the data from different sources (CSV, API, Scraping)
-- SQL: a lot can already be achieved at the database level, before relying on Python to sort data. Let's dive into some advanced queries!
+Explore datasets with `Jupyter Notebook` and `pandas`.
+
+
+## Data Sourcing
+
+Fetch data from APIs, webscraping, SQL database or with Google Big Query.
+
+## Data Visualization
+
+Build meaningful graphics with `Matplotlib` and `Seaborn`.
