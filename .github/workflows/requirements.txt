@@ -3,3 +3,4 @@ pandas
 ipython
 ipykernel
 --upgrade pip
+pip freeze > requirements.txt
