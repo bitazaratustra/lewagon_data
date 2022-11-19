@@ -1,0 +1,5 @@
+python=3.8.12
+pandas
+ipython
+ipykernel
+--upgrade pip
