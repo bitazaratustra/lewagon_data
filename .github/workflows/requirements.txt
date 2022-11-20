@@ -4,3 +4,7 @@ ipython
 ipykernel
 --upgrade pip
 pip freeze > requirements.txt
+pip>=9
+setuptools>=26
+twine
+wheel>=0.29
