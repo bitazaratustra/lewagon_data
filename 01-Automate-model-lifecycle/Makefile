@@ -28,6 +28,20 @@ run_workflow:
 default:
 	@echo 'tests are only executed locally for this challenge'
 
+test_lifecycle: test_mlflow_config test_prefect_config
+
+test_mlflow_config:
+	@TEST_ENV=development pytest \
+	tests/mlflow/test_mlflow.py::TestMlflow::test_model_target_is_mlflow \
+	tests/mlflow/test_mlflow.py::TestMlflow::test_mlflow_experiment_is_not_null \
+	tests/mlflow/test_mlflow.py::TestMlflow::test_mlflow_model_name_is_not_null
+
+test_prefect_config:
+	@TEST_ENV=development pytest \
+	tests/prefect/test_prefect.py::TestPrefect::test_prefect_flow_name_is_not_null \
+	tests/prefect/test_prefect.py::TestPrefect::test_prefect_log_level_is_warning
+
+
 ################### DATA SOURCES ACTIONS ################
 
 # Data sources: targets for monthly data imports
@@ -174,6 +188,9 @@ show_env:
 	@echo "\n$(ccgreen)MLflow:$(ccreset)"
 	@env | grep -E "MLFLOW_EXPERIMENT|MLFLOW_MODEL_NAME" || :
 	@env | grep -E "MLFLOW_TRACKING_URI|MLFLOW_TRACKING_DB" || :
+
+	@echo "\n$(ccgreen)Prefect:$(ccreset)"
+	@env | grep -E "PREFECT_BACKEND|PREFECT_FLOW_NAME|PREFECT_LOG_LEVEL" || :
 
 list:
 	@echo "\nHelp for the \`taxifare\` package \`Makefile\`"

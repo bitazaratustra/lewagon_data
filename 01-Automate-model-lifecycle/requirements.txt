@@ -18,3 +18,7 @@ google-cloud-storage
 pyarrow
 
 mlflow
+
+prefect<2
+prefect[viz]
+psycopg2-binary

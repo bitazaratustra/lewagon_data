@@ -50,7 +50,9 @@ env_valid_options = dict(
     DATASET_SIZE=["1k", "10k", "100k", "500k", "50M", "new"],
     VALIDATION_DATASET_SIZE=["1k", "10k", "100k", "500k", "500k", "new"],
     DATA_SOURCE=["local", "big query"],
-    MODEL_TARGET=["local", "gcs", "mlflow"],)
+    MODEL_TARGET=["local", "gcs", "mlflow"],
+    PREFECT_BACKEND=["development", "production"],
+)
 
 def validate_env_value(env, valid_options):
     env_value = os.environ[env]
