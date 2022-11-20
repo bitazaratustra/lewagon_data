@@ -2,7 +2,6 @@ python==3.8.12
 pandas
 ipython
 ipykernel
---upgrade pip
 pip freeze > requirements.txt
 pip>=9
 setuptools>=26
