@@ -28,9 +28,8 @@ def valid_boxes(grid):
             if sorted(square) != VALID_SET:
                 return False
     return True
-# $DELETE_END
+
 
 def sudoku_validator(grid):
-    # $CHALLENGIFY_BEGIN
+
     return valid_rows(grid) and valid_columns(grid) and valid_boxes(grid)
-    # $CHALLENGIFY_END
